@@ -7,6 +7,12 @@ There are two types of transfer learning in the context of deep learning:
 
 In this example, we will be treating networks as arbitrary feature extractors. When performing feature extraction, we treat the pre-trained network as an arbitrary feature extractor, allowing the input image to propagate forward, stopping at pre-specified layer, and taking the outputs of that layer as our features.
 
+Left: The original VGG16 network architecture that outputs probabilities for each of the 1,000 ImageNet class labels. Right: Removing the FC layers from VGG16 and instead of returning the final POOL layer. This output will serve as our extracted features:
+
+![](docs/vgg16_feature_extractor.png)
+
+PyImageSearch Tutorial: https://www.pyimagesearch.com/2019/05/20/transfer-learning-with-keras-and-deep-learning/
+
 ## Dataset
 
 Food             |  Non-Food
