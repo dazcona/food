@@ -7,6 +7,20 @@ There are two types of transfer learning in the context of deep learning:
 
 In this example, we will be treating networks as arbitrary feature extractors. When performing feature extraction, we treat the pre-trained network as an arbitrary feature extractor, allowing the input image to propagate forward, stopping at pre-specified layer, and taking the outputs of that layer as our features.
 
+## Dataset
+
+Food             |  Non-Food
+:-------------------------:|:-------------------------:
+![](docs/food.jpg)  | ![](docs/non_food.jpg)
+
+Food-5K dataset: curated by the Multimedia Signal Processing Group (MSPG) of the Swiss Federal Institute of Technology.
+
+The dataset, as the name suggests, consists of 5,000 images, belonging to two classes:
+* Food
+* Non-food
+
+Our goal of is to train a classifier such that we can distinguish between these two classes. MSPG has provided us with pre-split training, validation, and testing splits.
+
 ## Deployment
 
 1. Download food data and put it in data/:
@@ -17,14 +31,20 @@ $ unzip Food-5k.zip
 ```
 
 2. Build the docker image:
+```
 $ cd docker
 $ make build
+```
 
 3. Create a docker container based on the image:
+```
 $ make run
+```
 
 4. SSH to the docker container:
+```
 $ make dev
+```
 
 5. Build our custom dataset:
 ```
