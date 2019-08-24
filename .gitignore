@@ -7,3 +7,6 @@
 **/.vscode/
 data/Food-5K.zip
 data/*
+!data/.gitkeep
+output/*
+!output/.gitkeep

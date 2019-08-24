@@ -34,11 +34,42 @@ $ python src/build_dataset.py
 6. Extract features:
 ```
 $ python src/extract_features.py
+[INFO] loading network...
+[INFO] processing 'training split'...
+[INFO] processing batch 1/94
+[INFO] processing batch 2/94
+[INFO] processing batch 3/94
+[INFO] processing batch 4/94
+...
+[INFO] processing batch 93/94
+[INFO] processing batch 94/94
+[INFO] processing 'evaluation split'...
+[INFO] processing batch 1/32
+...
+[INFO] processing batch 30/32
+[INFO] processing batch 31/32
+[INFO] processing batch 32/32
+[INFO] processing 'validation split'...
+...
+[INFO] processing batch 30/32
+[INFO] processing batch 31/32
+[INFO] processing batch 32/32
 ```
 
 7. Train:
 ```
 $ python src/train.py
+[INFO] loading data...
+[INFO] training model...
+[INFO] evaluating...
+              precision    recall  f1-score   support
+
+        food       0.99      0.98      0.98       500
+    non_food       0.98      0.99      0.99       500
+
+    accuracy                           0.98      1000
+   macro avg       0.99      0.98      0.98      1000
+weighted avg       0.99      0.98      0.98      1000
 ```
 
 ## Resources

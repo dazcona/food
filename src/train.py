@@ -1,7 +1,7 @@
 # import the necessary packages
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
-from pyimagesearch import config
+import config
 import numpy as np
 import pickle
 import os
